@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Tour del Sur</title>
@@ -39,7 +43,7 @@
         <!-- JS -->
       </div>
 
-      <a class="destinos__temp" href="./html/clima.html"
+      <a class="destinos__temp" href="./html/clima.html" target="_blank"
         >Compruebe Temperatura</a
       >
     </main>
@@ -54,25 +58,23 @@
           alt="imagen contacto"
         />
         <form class="contacto__formulario">
-          <div>
+          <div class="obligatorio">
             <input
               type="text"
               name="nombre"
               id="nombre"
               placeholder="Nombre Completo"
             />
-            <div class="error"></div>
           </div>
-          <div>
+          <div class="obligatorio">
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Correo Electrónico"
             />
-            <div class="error"></div>
           </div>
-          <div>
+          <div class="obligatorio">
             <input type="tel" name="tel" id="tel" placeholder="Teléfono" />
           </div>
           <div>
@@ -143,6 +145,16 @@
           <a class="barra__link" href="#destinos">Destinos</a>
           <a class="barra__link" href="#contacto">Contacto</a>
         </nav>
+      </div>
+      <div class="footer__contacto contenedor">
+        <div class="flex">
+          <i class="fa fa-mobile-phone"></i>
+          <p>Teléfono: (+569) 1234-5678</p>
+        </div>
+        <div class="flex">
+          <i class="fa-sharp fa-solid fa-envelope"></i>
+          <p>Email: pachamama@correo.com</p>
+        </div>
       </div>
     </footer>
 

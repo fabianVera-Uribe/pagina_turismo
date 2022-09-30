@@ -17,6 +17,7 @@ html {
 body {
   font-size: 16px;
   font-family: var(--fuentePrincipal);
+  line-height: 1.7;
 }
 a {
   text-decoration: none;
@@ -65,7 +66,6 @@ ol {
     transition: all ease-in 150ms;
   }
 }
-
 .logo {
   color: white;
   text-transform: capitalize;
@@ -280,6 +280,18 @@ textarea:focus {
   border: none;
   background-color: rgba(226, 226, 226, 1);
 }
+input.error {
+  border: 2px solid red;
+}
+.mensaje-error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  margin-top: -0.5rem; /* contrarrestar el marginbottom del input */
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 .form__submit {
   background-color: white;
   border: 2px solid white;
@@ -320,27 +332,99 @@ textarea:focus {
 */
 .footer {
   background-color: #0d0c13;
-  height: 22rem;
-  padding-top: 3rem;
+  height: 35rem;
+  padding: 3rem 0;
+}
+.footer__flex {
+  margin-bottom: 2rem;
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: white;
 }
 @media (min-width: 768px) {
   .footer {
-    height: 15rem;
-    padding: 0;
+    height: 20rem;
+    padding: 4rem 0;
   }
   .footer__flex {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    height: 100%;
   }
 }
 
-.error {
-  color: orangered;
-  font-family: var(--fuenteSecundaria);
+/*
+! ** PAISES
+*/
+.header.pais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0c13;
+  height: 10rem;
+  margin-bottom: 5rem;
+}
+.header__flex.pais {
+  justify-content: center;
+}
+.footer.pais {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0c13;
+  height: 20rem;
+}
+.footer__flex.pais {
+  justify-content: center;
+}
+.paises {
+  height: 100vh;
+}
+.main__pais {
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #3b83bd;
+}
+.main img {
+  display: block;
+  width: 50%;
+  height: 40rem;
+  object-fit: cover;
+}
+.main__contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  height: 43.9rem;
+}
+@media (min-width: 768px) {
+  .main__contenido {
+    flex-direction: row;
+  }
+}
+.contenido__texto {
+  text-align: center;
+}
+.contenido__regresar {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: #3b83bd;
+  color: white;
+  padding: 0.5rem 2rem;
+}
+@media (min-width: 768px) {
+  .contenido__regresar {
+    width: 15rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

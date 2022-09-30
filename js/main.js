@@ -19,7 +19,7 @@ function crearDestinos() {
     <img class="destinos__imagen" src="img/galeria/${i}.webp" alt="paisaje" />
     <div class="capa">
       <h3 class="capa__titulo">${paises[i - 1]} </h3>
-      <a class="capa__boton" href="#">Ver Más</a>
+      <a class="capa__boton" href="../html/${i}.html" target="_blank">Ver Más</a>
     `;
     // console.log(imagen);
     destinos.appendChild(imagen);
@@ -54,21 +54,34 @@ function enviarFormulario() {
   const submit = document.getElementById("submit");
   const nombre = document.getElementById("nombre");
   const email = document.getElementById("email");
-  const mensajeError = document.querySelector(".error");
+  const tel = document.getElementById("tel");
+  const obligatorio = document.querySelectorAll(".obligatorio");
+  const alerta = document.querySelector(".mensaje-error");
+  console.log(obligatorio);
+  console.log(nombre);
+  console.log(tel);
+  // nombre.classList.add("error")
 
   submit.addEventListener("click", (e) => {
     e.preventDefault();
 
-    if (nombre.value.trim() === "") {
-      mensajeError.textContent = "Este campo es obligatorio";
+    mostrarError(nombre, 0);
+    mostrarError(email, 1);
+    mostrarError(tel, 2);
+  });
+
+  function mostrarError(id, serial) {
+    if (id.value.trim() === "") {
+      const mensaje = document.createElement("div");
+      mensaje.textContent = "Este campo es obligatorio";
+      mensaje.classList.add("mensaje-error");
+      id.classList.add("error");
+
+      obligatorio[serial].appendChild(mensaje);
       setTimeout(() => {
-        mensajeError.textContent = "";
+        id.classList.remove("error");
+        obligatorio[serial].removeChild(mensaje);
       }, 5000);
     }
-    if (email.value.trim() === "") {
-      mensajeError.textContent = "Este campo es obligatorio";
-    } else {
-      mensajeError.textContent = "";
-    }
-  });
+  }
 }
