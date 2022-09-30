@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   iniciarApp();
 });
-const paises = ["Chile", "Perú", "México", "Argentina", "Colombia", "Brasil"];
 
 function iniciarApp() {
   crearDestinos();
@@ -18,7 +17,6 @@ function crearDestinos() {
     imagen.innerHTML = ` 
     <img class="destinos__imagen" src="img/galeria/${i}.webp" alt="paisaje" />
     <div class="capa">
-      <h3 class="capa__titulo">${paises[i - 1]} </h3>
       <a class="capa__boton" href="./${i}.html">Ver Más</a>
     `;
     // console.log(imagen);
