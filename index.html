@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Tour del Sur</title>
+  </head>
+  <body>
+    <section id="hero" class="hero">
+      <header class="header">
+        <div class="header__flex contenedor">
+          <a href="index.html">
+            <h1 class="logo">
+              <span class="logo__azul">Pacha</span>mama
+              <span class="logo__tours">Tours</span>
+            </h1>
+          </a>
+
+          <nav class="barra">
+            <a class="barra__link" href="#hero">Inicio</a>
+            <a class="barra__link" href="#destinos">Destinos</a>
+            <a class="barra__link" href="#contacto">Contacto</a>
+          </nav>
+        </div>
+      </header>
+      <div class="hero__flex">
+        <p class="hero__texto">La verdadera felicidad está en viajar</p>
+
+        <a href="#" class="hero__boton">Leer Más</a>
+      </div>
+    </section>
+
+    <main class="destinos contenedor" id="destinos">
+      <h2 class="destinos__titulo">Destinos</h2>
+      <div id="destinos__galeria">
+        <!-- JS -->
+      </div>
+    </main>
+
+    <section id="contacto" class="contacto">
+      <h3 class="contacto__titulo">Contáctanos</h3>
+      <div class="contacto-grid">
+        <img
+          loading="lazy"
+          class="contacto__imagen"
+          src="./img/contacto.webp"
+          alt="imagen contacto"
+        />
+        <form class="contacto__formulario">
+          <div>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre Completo"
+            />
+            <div class="error"></div>
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Correo Electrónico"
+            />
+            <div class="error"></div>
+          </div>
+          <div>
+            <input type="tel" name="tel" id="tel" placeholder="Teléfono" />
+          </div>
+          <div>
+            <input type="text" name="asunto" id="asunto" placeholder="Asunto" />
+          </div>
+          <div>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+              placeholder="Mensaje"
+            ></textarea>
+          </div>
+          <div>
+            <input
+              type="submit"
+              class="form__submit"
+              id="submit"
+              value="Enviar"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="contacto__mapa contenedor">
+        <div class="gmap_canvas">
+          <iframe
+            width="600"
+            height="500"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=nueva%20hipodromo%20737&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe
+          ><a href="https://123movies-to.org"></a><br /><style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 500px;
+              width: 600px;
+            }</style
+          ><a href="https://www.embedgooglemap.net">html google map embed</a
+          ><style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 500px;
+              width: 600px;
+            }
+          </style>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__flex contenedor">
+        <a href="index.html">
+          <h1 class="logo">
+            <span class="logo__azul">Pacha</span>mama
+            <span class="logo__tours">Tours</span>
+          </h1>
+        </a>
+
+        <nav class="barra">
+          <a class="barra__link" href="#hero">Inicio</a>
+          <a class="barra__link" href="#destinos">Destinos</a>
+          <a class="barra__link" href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
