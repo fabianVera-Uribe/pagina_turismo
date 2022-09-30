@@ -19,7 +19,7 @@ function crearDestinos() {
     <img class="destinos__imagen" src="img/galeria/${i}.webp" alt="paisaje" />
     <div class="capa">
       <h3 class="capa__titulo">${paises[i - 1]} </h3>
-      <a class="capa__boton" href="./html/${i}.html" target="_blank">Ver Más</a>
+      <a class="capa__boton" href="./${i}.html" target="_blank">Ver Más</a>
     `;
     // console.log(imagen);
     destinos.appendChild(imagen);
