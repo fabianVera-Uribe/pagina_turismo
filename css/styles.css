@@ -223,7 +223,18 @@ ol {
     gap: 2rem;
   }
 }
-
+.destinos__temp {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #3b83bd;
+  padding: 1rem 2rem;
+  width: 20rem;
+}
 /*
 ! ** CONTACTO
 */
